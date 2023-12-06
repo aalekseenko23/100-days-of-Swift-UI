@@ -1,3 +1,8 @@
 import UIKit
 
-var greeting = "Hello, playground"
+func ifTwoStringAreTheSame(stringOne: String, stringTwo: String) -> Bool {
+    let result = stringOne == stringTwo
+    return result
+}
+
+ifTwoStringAreTheSame(stringOne: "a", stringTwo: "ab")
