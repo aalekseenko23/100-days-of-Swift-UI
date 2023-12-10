@@ -7,4 +7,4 @@ func timeTable (for number: Int, end: Int = 10) {
 }
 
 timeTable(for: 2)
-timeTable(for: 1 )
+timeTable(for: 1)
