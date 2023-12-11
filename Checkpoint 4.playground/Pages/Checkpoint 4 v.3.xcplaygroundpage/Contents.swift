@@ -5,7 +5,11 @@ enum rootError: Error {
 }
 
 func calculteRoot (your_root: Int) throws -> Int {
-    let rootTable: [Int] = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+    var rootTable: [Int] = []
+    for i in 0...101 {
+        rootTable.append(i)
+    }
+    
     if your_root < 0 {throw rootError.outOfRange}
     if your_root > 10000 {throw rootError.outOfRange}
     else {
@@ -15,12 +19,10 @@ func calculteRoot (your_root: Int) throws -> Int {
                 print("Your square root equals \(result)")
                 return result
             }
-            else {throw rootError.noRoot}
-        
         }
+        throw rootError.noRoot
     }
-    
-    
+
 }
 
-calculteRoot(your_root: -2)
+calculteRoot(your_root: 37)
