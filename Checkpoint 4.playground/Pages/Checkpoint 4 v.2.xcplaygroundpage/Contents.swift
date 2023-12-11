@@ -1,7 +1,6 @@
-import UIKit
-
 enum rootError: Error {
-    case outOfRange, noRoot
+    case outOfRange
+    case noRoot
 }
 
 func calculteRoot (your_root: Int) throws -> Int {
@@ -13,13 +12,9 @@ func calculteRoot (your_root: Int) throws -> Int {
             if your_root == (root * root) {
                 let result = root
                 return result
-                print("Your square root equals \(result)")
+                print("Your square root equals (result)")
             }
-            else {throw rootError.noRoot}
+            else { throw rootError.noRoot }
         }
     }
-    
-    
 }
-
-calculteRoot(your_root: 2)
